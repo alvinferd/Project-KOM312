@@ -52,7 +52,8 @@ blablablabla
 blabla
 
 ## ⚙️ Pre-Install Requirements
-Terdapat beberapa requirements yang akan kita gunakan untuk melakukan install dan build pada aplikasi. Untuk itu, kita harus memastikan semua requirements dibawah ini terinstall dengan benar. Beberapa requirement memiliki minimal versi yang _capable_ untuk digunakan. Namun di bawah ini adalah versi dari requirement yang kami install dan gunakan.<br>
+Terdapat beberapa requirements yang akan kita gunakan untuk melakukan install dan build pada aplikasi. Untuk itu, kita harus memastikan semua requirements dibawah ini terinstall dengan benar. Beberapa requirement memiliki minimal versi yang _capable_ untuk digunakan. Namun di bawah ini adalah versi dari requirement yang kami install dan gunakan.<br><br>
+
  **NodeJS v14.16.0**
 ```
 $ cd ~
@@ -60,6 +61,7 @@ $ curl -sL https://deb.nodesource.com/setup_10.x -o nodesource_setup.sh
 $ sudo bash nodesource_setup.sh
 $ sudo apt install nodejs
 ```
+
 **Yarn 1.22.5**
 ```
 $ curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
@@ -68,10 +70,12 @@ $ sudo apt update
 $ sudo apt remove cmdtest
 $ sudo apt install yarn
 ```
+
 **npm 6.14.11**
 ```
 $ sudo npm install
 ```
+---
 
 <br><br>
 ## Install && Build
@@ -85,6 +89,7 @@ $ yarn
 # Install frontend dependencies and build
 $ cd webapp && yarn && yarn build && cd ..
 ```
+---
 <br><br>
 ## Running the App
 Pastikan anda sudah berada pada directory aplikasi
@@ -96,6 +101,7 @@ $ yarn start
 ```
 something
 ```
+---
 
 ## 🔒 Setup HTTPS pada backend
 blablabla
