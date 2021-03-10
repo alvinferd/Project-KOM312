@@ -8,7 +8,7 @@
 [![Say thanks](https://badges.fw-web.space/badge/SayThanks.io-%E2%98%BC-1EAEDB.svg?style=flat-square)](https://saythanks.io/to/n1try)
 
 ## Tugas Proyek KOM312 Komunikasi Data dan Jaringan
-Repositori orisinil : https://github.com/muety/mininote
+Original Repository : https://github.com/muety/mininote
 
 ## Anggota
 <table>
@@ -80,7 +80,7 @@ $ sudo npm install
 ---
 
 <br><br>
-## Install && Build
+## ⚙️Install && Build
 ```
 # **Clone Repositori orisinilnya**
 $ git clone https://github.com/muety/mininote
@@ -93,7 +93,7 @@ $ cd webapp && yarn && yarn build && cd ..
 ```
 ---
 <br><br>
-## Running the App
+## ⌨️ Running the App
 Pastikan anda sudah berada pada directory aplikasi. Apabila aplikasi diinstall pada local computer, secara default akan terinstall pada port : 3000. <br>
 Sehingga kita dapat mengakses aplikasi pada localhost:3000 <br>
 ```
