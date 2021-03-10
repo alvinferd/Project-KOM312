@@ -8,7 +8,7 @@
 [![Say thanks](https://badges.fw-web.space/badge/SayThanks.io-%E2%98%BC-1EAEDB.svg?style=flat-square)](https://saythanks.io/to/n1try)
 
 ## Tugas Proyek KOM312 Komunikasi Data dan Jaringan
-Referer : https://github.com/muety/mininote
+Repositori orisinil : https://github.com/muety/mininote
 
 ## Anggota
 <table>
@@ -46,19 +46,36 @@ Referer : https://github.com/muety/mininote
 
 ---
 
-A simple, self-hosted Markdown note-taking app built with [Vue 3](https://v3.vuejs.org), and [Express](http://expressjs.com). Check out the **[hosted demo](https://apps.muetsch.io/mininote)**!
+## Deskripsi Aplikasi
+blablabalbla
+blablablabla
+blabla
 
-![](https://i.imgur.com/Y9TFu6w.png)
-
-[![Buy me a coffee](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://buymeacoff.ee/n1try)
-
-
-## ⚙️ Requirements
-* NodeJS >= `12.19.0 LTS`
-
-## ⌨️ How to run?
-```bash
-# Clone the repo
+## ⚙️ Pre-Install Requirements
+ **NodeJS v14.16.0**
+```
+$ cd ~
+$ curl -sL https://deb.nodesource.com/setup_10.x -o nodesource_setup.sh
+$ sudo bash nodesource_setup.sh
+$ sudo apt install nodejs
+```
+**Yarn 1.22.5**
+```
+$ curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+$ echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+$ sudo apt update
+$ sudo apt remove cmdtest
+$ sudo apt install yarn
+```
+**npm 6.14.11**
+```
+$ sudo npm install
+```
+_semua versi yang dicantumkan adalah berdasarkan versi yang kami gunakan_
+<br><br>
+## Install && Build
+```
+# **Clone Repositori orisinilnya**
 $ git clone https://github.com/muety/mininote
 
 # Install backend dependencies
@@ -66,17 +83,17 @@ $ yarn
 
 # Install frontend dependencies and build
 $ cd webapp && yarn && yarn build && cd ..
-
-# Run
+```
+<br><br>
+## Running the App
+Pastikan anda sudah berada pada directory aplikasi
+```
+$ cd mininote
 $ yarn start
 ```
-
-## 🐳 How to run with Docker?
-```bash
-# Create a persistent volume
+**Menjalankan aplikasi menggunakan docker <br>**
+```
 $ docker volume create mininote-data
-
-# Run the container
 $ docker run -d -p 3000:3000 -v mininote-data:/app/data --name mininote n1try/mininote
 ```
 
@@ -86,18 +103,5 @@ $ docker run -d -p 3000:3000 -v mininote-data:/app/data --name mininote n1try/mi
 3. Launch the backend server
 -> To switch back to the HTTP server, nullify either field and relaunch again.
 
-## ☑️ Todo
-This project is still under development. The following features are about to be implemented. Feel free to contribute.
-* Tests
-* Improved data validation
-* More REST
-* Ability to rename notebooks and notes
-
-## 🧑‍💻 Contributing
-Feel free to contribute! All contributions that add value to the project are welcome. However, please be aware that you are not done after having opened a PR. In order to keep quality high, it is expected that you implement change requests and react to comments within an adequate time, until your code is merged. Otherwise your PRs will be closed after a while, sorry!
-
 ## 📓 License
 MIT @ [Ferdinand Mütsch](https://muetsch.io)
-
-
-
