@@ -50,6 +50,8 @@ Repositori orisinil : https://github.com/muety/mininote
 blablabalbla
 blablablabla
 blabla
+---
+<br>
 
 ## ⚙️ Pre-Install Requirements
 Terdapat beberapa requirements yang akan kita gunakan untuk melakukan install dan build pada aplikasi. Untuk itu, kita harus memastikan semua requirements dibawah ini terinstall dengan benar. Beberapa requirement memiliki minimal versi yang _capable_ untuk digunakan. Namun di bawah ini adalah versi dari requirement yang kami install dan gunakan.<br><br>
@@ -92,7 +94,8 @@ $ cd webapp && yarn && yarn build && cd ..
 ---
 <br><br>
 ## Running the App
-Pastikan anda sudah berada pada directory aplikasi
+Pastikan anda sudah berada pada directory aplikasi. Apabila aplikasi diinstall pada local computer, secara default akan terinstall pada port : 3000. <br>
+Sehingga kita dapat mengakses aplikasi pada localhost:3000 <br>
 ```
 $ cd mininote
 $ yarn start
@@ -103,8 +106,11 @@ something
 ```
 ---
 
+<br><br>
 ## 🔒 Setup HTTPS pada backend
 blablabla
+---
 
+<br><br>
 ## 📓 License
 MIT @ [Ferdinand Mütsch](https://muetsch.io)
