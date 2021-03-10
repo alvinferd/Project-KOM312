@@ -52,6 +52,7 @@ blablablabla
 blabla
 
 ## ⚙️ Pre-Install Requirements
+Terdapat beberapa requirements yang akan kita gunakan untuk melakukan install dan build pada aplikasi. Untuk itu, kita harus memastikan semua requirements dibawah ini terinstall dengan benar. Beberapa requirement memiliki minimal versi yang _capable_ untuk digunakan. Namun di bawah ini adalah versi dari requirement yang kami install dan gunakan.<br>
  **NodeJS v14.16.0**
 ```
 $ cd ~
@@ -71,7 +72,7 @@ $ sudo apt install yarn
 ```
 $ sudo npm install
 ```
-_semua versi yang dicantumkan adalah berdasarkan versi yang kami gunakan_
+
 <br><br>
 ## Install && Build
 ```
@@ -96,11 +97,8 @@ $ yarn start
 something
 ```
 
-## 🔒 Use HTTPS for backend
-1. Open `config.js`
-2. Edit the `HTTPS_KEY` and `HTTPS_CERT` field, and insert the file locations at which your private key and site certifications are stored.
-3. Launch the backend server
--> To switch back to the HTTP server, nullify either field and relaunch again.
+## 🔒 Setup HTTPS pada backend
+blablabla
 
 ## 📓 License
 MIT @ [Ferdinand Mütsch](https://muetsch.io)
