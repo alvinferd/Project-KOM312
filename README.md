@@ -93,8 +93,7 @@ $ yarn start
 ```
 **Menjalankan aplikasi menggunakan docker <br>**
 ```
-$ docker volume create mininote-data
-$ docker run -d -p 3000:3000 -v mininote-data:/app/data --name mininote n1try/mininote
+something
 ```
 
 ## 🔒 Use HTTPS for backend
