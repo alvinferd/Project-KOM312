@@ -49,6 +49,29 @@ blabla
 ---
 <br>
 
+## ⚙️Setup VPS
+Kami mencoba untuk menginstall dan menjalankan aplikasi menggunakan Virtual Private Server. Untuk itu, terlebih dahulu kita perlu untuk membuat sebuah VPS dan melakukan beberapa setup. Disini kami menggunakan VPS dari **Google Cloud Product** menggunakan _credit free trial_ . Pada prosesnya, pertama kita perlu membuat sebuah VM baru pada google cloud.
+
+![](Dokumentasi/SS3.png)
+Adapun details VPS yang kami setup diantaranya : <br>
+- **Machine type** : n1-standard-1 (1 vCPU, 3.75 GB memory)
+- **CPU platform** : Intel Skylake
+- **Zone** : asia-southeast2-a
+- **External IP** : 34.101.67.147 (ephemeral)
+- **Operating System** : Ubuntu 20.04 LTS
+- **Remote Access** : SSH<br>
+<p>Karena aplikasi web akan dibuka sebagai akses publik, kita perlu untuk menyiapkan beberapa port dan rule firewall juga.</p>
+
+![](Dokumentasi/SS2.png)
+<p> Kita juga harus memastikan bahwa server dapat terkoneksi menggunakan SSH. Kita dapat mengakses remote google cloud, dan login sebagai sudo untuk membuat akses baru agar server dapat diakses menggunakan SSH client, serta menambahkan beberapa pengaturan lain yang diperlukan. Setelah VPS siap digunakan, kita dapat lanjut ke langkah berikutnya yaitu mempersiapkan requirement untuk menginstall aplikasi.</p>
+
+---
+
+<br>
+
+Untuk menjalankan aplikasi terdapat 2 cara, yaitu dengan cara manual dan juga docker.
+
+## - __Manual__
 ## ⚙️ Pre-Install Requirements
 Terdapat beberapa requirements yang akan kita gunakan untuk melakukan install dan build pada aplikasi. Untuk itu, kita harus memastikan semua requirements dibawah ini terinstall dengan benar. Beberapa requirement memiliki minimal versi yang _capable_ untuk digunakan. Namun di bawah ini adalah versi dari requirement yang kami install dan gunakan.<br><br>
 
@@ -74,8 +97,8 @@ $ sudo apt install yarn
 $ sudo npm install
 ```
 ---
+<br>
 
-<br><br>
 ## ⚙️Install && Build
 ```
 # **Clone Repositori orisinilnya**
@@ -90,19 +113,45 @@ $ cd webapp && yarn && yarn build && cd ..
 ---
 <br><br>
 ## ⌨️ Running the App
-Pastikan anda sudah berada pada directory aplikasi, dan seluruh installan beserta pre-install requirement sudah terpenuhi. Apabila aplikasi diinstall pada local computer, secara default akan dijalankan pada port : 3000. <br>
+Pastikan anda sudah berada pada directory aplikasi, dan seluruh installan beserta pre-install requirement sudah terpenuhi. Apabila aplikasi diinstall pada local computer, secara default akan dijalankan pada port 3000. <br>
 Sehingga kita dapat mengakses aplikasi pada localhost:3000 <br>
 ```
 $ cd mininote
 $ yarn start
 ```
-**Menjalankan aplikasi menggunakan docker <br>**
-Alternatif cara lain menjalankan aplikasi adalah dengan menggunakan docker. Docker sendiri merupakan ... <br>Keuntungan Menggunakan Docker ... <br><br>
-* _Install && Build Docker :_
+
+## - _Docker_
+Terdapat alternatif lain untuk menjalankan aplikasi, yaitu menggunakan docker. Docker sendiri merupakan program untuk membangun, mengemas, dan menjalankan aplikasi dengan membuatnya menjadi container (wadah).  Keuntungan menggunakan docker salah satunya adalah terisolasi, aplikasi yang terisolasi akan terpisah dan tidak akan mengganggu host apabila terdapat masalah (Mirip seperti VM). <br><br>
+
+* Instalasi docker :_
 ```
-something
+$ sudo apt-get update
+$ sudo apt-get install \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    gnupg \
+    lsb-release
+$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+$ echo \
+  "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
+  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+$ sudo apt-get install docker-ce docker-ce-cli containerd.io
+
 ```
+
 * _Menjalankan Aplikasi_
+```
+# Membuat volume persistent yang akan digunakan aplikasi
+$ docker volume create mininote-data
+
+# Mendownload image dari docker hub, membuat container, lalu menjalankannya
+$ docker run -d -p 3000:3000 -v mininote-data:/app/data --name mininote n1try/mininote
+
+```
+<p> Setelah command tersebut dijalankan, aplikasi langsung bisa diakses secara publik di port 3000. </p>
+
+![](Dokumentasi/SS1.png)
 ---
 
 <br><br>
