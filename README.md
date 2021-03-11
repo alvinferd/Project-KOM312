@@ -5,9 +5,9 @@
 [![Say thanks](https://badges.fw-web.space/badge/SayThanks.io-%E2%98%BC-1EAEDB.svg?style=flat-square)](https://saythanks.io/to/n1try)<br>
 Original Repository : https://github.com/muety/mininote
 <br>
-## Laporan Proyek Akhir KOM312 Komunikasi Data dan Jaringan
+# Laporan Proyek Akhir KOM312 Komunikasi Data dan Jaringan
 
-## Anggota
+# Anggota
 <table>
     <thead>
         <tr>
@@ -42,14 +42,14 @@ Original Repository : https://github.com/muety/mininote
 
 ---
 
-## Deskripsi Aplikasi
+# Deskripsi Aplikasi
 blablabalbla
 blablablabla
 blabla
 ---
 <br>
 
-## ⚙️Setup VPS
+# ⚙️Setup VPS
 Kami mencoba untuk menginstall dan menjalankan aplikasi menggunakan Virtual Private Server. Untuk itu, terlebih dahulu kita perlu untuk membuat sebuah VPS dan melakukan beberapa setup. Disini kami menggunakan VPS dari **Google Cloud Product** menggunakan _credit free trial_ . Pada prosesnya, pertama kita perlu membuat sebuah VM baru pada google cloud.
 
 ![](Dokumentasi/SS3.png)
@@ -71,7 +71,7 @@ Adapun details VPS yang kami setup diantaranya : <br>
 
 Untuk menjalankan aplikasi terdapat 2 cara, yaitu dengan cara manual dan juga docker.
 
-## - __Manual__
+# __Manual__
 ## ⚙️ Pre-Install Requirements
 Terdapat beberapa requirements yang akan kita gunakan untuk melakukan install dan build pada aplikasi. Untuk itu, kita harus memastikan semua requirements dibawah ini terinstall dengan benar. Beberapa requirement memiliki minimal versi yang _capable_ untuk digunakan. Namun di bawah ini adalah versi dari requirement yang kami install dan gunakan.<br><br>
 
@@ -120,10 +120,10 @@ $ cd mininote
 $ yarn start
 ```
 
-## - _Docker_
+# 🐳 __Docker__
 Terdapat alternatif lain untuk menjalankan aplikasi, yaitu menggunakan docker. Docker sendiri merupakan program untuk membangun, mengemas, dan menjalankan aplikasi dengan membuatnya menjadi container (wadah).  Keuntungan menggunakan docker salah satunya adalah terisolasi, aplikasi yang terisolasi akan terpisah dan tidak akan mengganggu host apabila terdapat masalah (Mirip seperti VM). <br><br>
 
-* Instalasi docker :_
+## ⚙️ Instalasi docker :
 ```
 $ sudo apt-get update
 $ sudo apt-get install \
@@ -140,7 +140,7 @@ $ sudo apt-get install docker-ce docker-ce-cli containerd.io
 
 ```
 
-* _Menjalankan Aplikasi_
+## ⌨️ Running the App
 ```
 # Membuat volume persistent yang akan digunakan aplikasi
 $ docker volume create mininote-data
