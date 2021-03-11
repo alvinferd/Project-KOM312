@@ -1,14 +1,11 @@
 # ![](webapp/public/favicon-32x32.png) MiniNote
 ![GitHub package.json version](https://badges.fw-web.space/github/package-json/v/muety/mininote?style=flat-square)
 ![](https://badges.fw-web.space/github/license/muety/mininote?style=flat-square)
-![GitHub code size in bytes](https://badges.fw-web.space/github/languages/code-size/muety/mininote?style=flat-square)
-![GitHub last commit](https://badges.fw-web.space/github/last-commit/muety/mininote?style=flat-square)
 ![Docker Cloud Build Status](https://badges.fw-web.space/docker/cloud/build/n1try/mininote?style=flat-square)
-[![](https://badges.fw-web.space/liberapay/receives/muety.svg?logo=liberapay&style=flat-square)](https://liberapay.com/muety/)
-[![Say thanks](https://badges.fw-web.space/badge/SayThanks.io-%E2%98%BC-1EAEDB.svg?style=flat-square)](https://saythanks.io/to/n1try)
-
-## Tugas Proyek KOM312 Komunikasi Data dan Jaringan
+[![Say thanks](https://badges.fw-web.space/badge/SayThanks.io-%E2%98%BC-1EAEDB.svg?style=flat-square)](https://saythanks.io/to/n1try)<br>
 Original Repository : https://github.com/muety/mininote
+<br>
+## Laporan Proyek Akhir KOM312 Komunikasi Data dan Jaringan
 
 ## Anggota
 <table>
@@ -17,7 +14,6 @@ Original Repository : https://github.com/muety/mininote
             <th></th>
             <th>Nama</th>
             <th>Nim</th>
-            <th>Role</th>
         </tr>
     </thead>
     <tbody>
@@ -94,16 +90,19 @@ $ cd webapp && yarn && yarn build && cd ..
 ---
 <br><br>
 ## ⌨️ Running the App
-Pastikan anda sudah berada pada directory aplikasi. Apabila aplikasi diinstall pada local computer, secara default akan terinstall pada port : 3000. <br>
+Pastikan anda sudah berada pada directory aplikasi, dan seluruh installan beserta pre-install requirement sudah terpenuhi. Apabila aplikasi diinstall pada local computer, secara default akan dijalankan pada port : 3000. <br>
 Sehingga kita dapat mengakses aplikasi pada localhost:3000 <br>
 ```
 $ cd mininote
 $ yarn start
 ```
 **Menjalankan aplikasi menggunakan docker <br>**
+Alternatif cara lain menjalankan aplikasi adalah dengan menggunakan docker. Docker sendiri merupakan ... <br>Keuntungan Menggunakan Docker ... <br><br>
+* _Install && Build Docker :_
 ```
 something
 ```
+* _Menjalankan Aplikasi_
 ---
 
 <br><br>
