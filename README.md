@@ -123,7 +123,8 @@ $ yarn start
 # 🐳 __Docker__
 Terdapat alternatif lain untuk menjalankan aplikasi, yaitu menggunakan docker. Docker sendiri merupakan program untuk membangun, mengemas, dan menjalankan aplikasi dengan membuatnya menjadi container (wadah).  Keuntungan menggunakan docker salah satunya adalah terisolasi, aplikasi yang terisolasi akan terpisah dan tidak akan mengganggu host apabila terdapat masalah (Mirip seperti VM). <br><br>
 
-## ⚙️ Instalasi docker :
+## ⚙️ Pre-Install Requirements:
+**Docker**
 ```
 $ sudo apt-get update
 $ sudo apt-get install \
@@ -137,7 +138,6 @@ $ echo \
   "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
   $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 $ sudo apt-get install docker-ce docker-ce-cli containerd.io
-
 ```
 
 ## ⌨️ Running the App
@@ -147,7 +147,6 @@ $ docker volume create mininote-data
 
 # Mendownload image dari docker hub, membuat container, lalu menjalankannya
 $ docker run -d -p 3000:3000 -v mininote-data:/app/data --name mininote n1try/mininote
-
 ```
 <p> Setelah command tersebut dijalankan, aplikasi langsung bisa diakses secara publik di port 3000. </p>
 
