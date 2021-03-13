@@ -65,13 +65,16 @@ Adapun details VPS yang kami setup diantaranya : <br>
 ![](Dokumentasi/SS2.png)
 <p> Kita juga harus memastikan bahwa server dapat terkoneksi menggunakan SSH. Kita dapat mengakses remote google cloud, dan login sebagai sudo untuk membuat akses baru agar server dapat diakses menggunakan SSH client, serta menambahkan beberapa pengaturan lain yang diperlukan. Setelah VPS siap digunakan, kita dapat lanjut ke langkah berikutnya yaitu mempersiapkan requirement untuk menginstall aplikasi.</p>
 
+![](Dokumentasi/SS4.png)
+![](Dokumentasi/SS5.png)
+
 ---
 
 <br>
 
 Untuk menjalankan aplikasi terdapat 2 cara, yaitu dengan cara manual dan juga docker.
 
-# __Manual__
+# **__1. Manual__**
 ## ⚙️ Pre-Install Requirements
 Terdapat beberapa requirements yang akan kita gunakan untuk melakukan install dan build pada aplikasi. Untuk itu, kita harus memastikan semua requirements dibawah ini terinstall dengan benar. Beberapa requirement memiliki minimal versi yang _capable_ untuk digunakan. Namun di bawah ini adalah versi dari requirement yang kami install dan gunakan.<br><br>
 
@@ -99,7 +102,7 @@ $ sudo npm install
 ---
 <br>
 
-## ⚙️Install && Build
+## ⚙️Build && Run
 ```
 # **Clone Repositori orisinilnya**
 $ git clone https://github.com/muety/mininote
@@ -110,17 +113,14 @@ $ yarn
 # Install frontend dependencies and build
 $ cd webapp && yarn && yarn build && cd ..
 ```
----
-<br><br>
-## ⌨️ Running the App
-Pastikan anda sudah berada pada directory aplikasi, dan seluruh installan beserta pre-install requirement sudah terpenuhi. Apabila aplikasi diinstall pada local computer, secara default akan dijalankan pada port 3000. <br>
-Sehingga kita dapat mengakses aplikasi pada localhost:3000 <br>
+<p> Pastikan anda sudah berada pada directory aplikasi, dan seluruh installan beserta pre-install requirement sudah terpenuhi. Apabila aplikasi diinstall pada local computer, secara default akan dijalankan pada port 3000. Sehingga kita dapat mengakses aplikasi pada localhost:3000. Setelah build berhasil, kita dapat langsung menjalankan aplikasi. </p>
+
 ```
 $ cd mininote
 $ yarn start
 ```
 
-# 🐳 __Docker__
+# 🐳 **__2. Docker__**
 Terdapat alternatif lain untuk menjalankan aplikasi, yaitu menggunakan docker. Docker sendiri merupakan program untuk membangun, mengemas, dan menjalankan aplikasi dengan membuatnya menjadi container (wadah).  Keuntungan menggunakan docker salah satunya adalah terisolasi, aplikasi yang terisolasi akan terpisah dan tidak akan mengganggu host apabila terdapat masalah (Mirip seperti VM). <br><br>
 
 ## ⚙️ Pre-Install Requirements:
