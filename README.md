@@ -164,8 +164,73 @@ $ docker run -d -p 3000:3000 -v mininote-data:/app/data --name mininote n1try/mi
 ---
 
 <br><br>
-## 🔒 Setup HTTPS pada backend
-blablabla
+# 🔒 Setup domain dan SSL
+Kami menggunakan cloudflare sebagai server penghubung antara server asli dengan visitor. Cloudflare sendiri adalah Content Delivery Network (CDN) yang memiliki banyak fasilitas, beberapa diataranya adalah sebagai berikut:
+- Mitigasi serangan DDoS.
+- Analytics request yang mengakses website.
+- Instalasi sertifikat SSL.
+- DNS
+- Dll.
+
+Oleh karena itu kami menggunakannya untuk instalasi SSL dan sebagai DNS.
+
+Di sisi server, kami menggunakan nginx sebagai web server untuk melakukan setup domain dan sertikat SSL yang telah diberikan oleh cloudflare pada server. Selain itu, nginx juga digunakan untuk melakukan reverse proxy ke port tertentu tempat aplikasi berada.
+
+## ⚙️ Requirements:
+**nginx**
+```
+$ sudo apt install nginx
+```
+# TODO Langkah Cloudflare.
+
+Tambahkan file konfigurasi /etc/nginx/sites-available/mininote dengan isi sebagai berikut:
+```
+server {
+    listen 80;
+    listen [::]:80;
+    
+    # Sesuaikan dengan domain anda
+    server_name mininote.bintangfikriguska.my.id www.mininote.bintangfikriguska.my.id;
+
+    return 302 https://$server_name$request_uri;
+}
+
+server {
+        listen 443 ssl http2;
+        listen [::]:443 ssl http2;
+
+        # Sesuaikan dengan domain anda
+        server_name mininote.bintangfikriguska.my.id www.mininote.bintangfikriguska.my.id;
+        
+        # Sesuai dengan sertifikat file yang terdapat di server anda
+        ssl_certificate /etc/ssl/certs/cert.pem;
+        ssl_certificate_key /etc/ssl/private/priv.key;
+
+        access_log /var/log/nginx/reverse-access.log;
+        error_log /var/log/nginx/reverse-error.log debug;
+
+        location / {
+
+                proxy_set_header        Host $host;
+                proxy_set_header        X-Real-IP $remote_addr;
+                proxy_set_header        X-Forwarded-For $proxy_add_x_forwarded_for;
+                proxy_set_header        X-Forwarded-Proto $scheme;
+                
+                proxy_pass          http://localhost:3000;
+        }
+}
+```
+Setelah itu buat symbolic link (symlink) `/etc/nginx/sites-enabled/mininote` yang mengarah ke `/etc/nginx/sites-available/mininote`. Setelah membuat symlink di dalam folder tersebut, file konfigurasi yang telah kita buat tersebut diaggap aktif oleh nginx. Alasan digunakannya symlink di folder `sites-enabled` adalah agar lebih terorganisir, jadi apabila ingin menonaktifkan file konfigurasi (menghapus symlink) dan suatu saat ingin mengaktifkannya lagi, tinggal membuat symlink yang baru ke folder `sites-enabled`.
+
+```
+sudo ln -s /etc/nginx/sites-available/mininote /etc/nginx/sites-enabled/
+```
+Lakukan `reload` file konfigurasi nginx.
+```
+sudo nginx -s reload
+```
+
+
 ---
 
 <br><br>
