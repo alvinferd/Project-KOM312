@@ -156,11 +156,10 @@ $ sudo apt-get install docker-ce docker-ce-cli containerd.io
 $ docker volume create mininote-data
 
 # Mendownload image dari docker hub, membuat container, lalu menjalankannya
-$ docker run -d -p 3000:3000 -v mininote-data:/app/data --name mininote n1try/mininote
+$ docker run -d -p 127.0.0.1:3000:3000 -v mininote-data:/app/data --name mininote n1try/mininote
 ```
-<p> Setelah command tersebut dijalankan, aplikasi langsung bisa diakses secara publik di port 3000. </p>
+<p> Setelah command tersebut dijalankan, aplikasi bisa diakses di localhost port 3000 sama seperti penginstalan manual. </p>
 
-![](Dokumentasi/SS1.png)
 ---
 
 <br><br>
@@ -183,7 +182,7 @@ $ sudo apt install nginx
 ```
 # \#TODO Langkah Cloudflare.
 
-Tambahkan file konfigurasi /etc/nginx/sites-available/mininote dengan isi sebagai berikut:
+Tambahkan file konfigurasi `/etc/nginx/sites-available/mininote` dengan isi sebagai berikut:
 ```
 server {
     listen 80;
@@ -223,11 +222,11 @@ server {
 Setelah itu buat symbolic link (symlink) `/etc/nginx/sites-enabled/mininote` yang mengarah ke `/etc/nginx/sites-available/mininote`. Setelah membuat symlink di dalam folder tersebut, file konfigurasi yang telah kita buat tersebut diaggap aktif oleh nginx. Alasan digunakannya symlink di folder `sites-enabled` adalah agar lebih terorganisir, jadi apabila ingin menonaktifkan file konfigurasi (menghapus symlink) dan suatu saat ingin mengaktifkannya lagi, tinggal membuat symlink yang baru ke folder `sites-enabled`.
 
 ```
-sudo ln -s /etc/nginx/sites-available/mininote /etc/nginx/sites-enabled/
+$ sudo ln -s /etc/nginx/sites-available/mininote /etc/nginx/sites-enabled/
 ```
 Lakukan *reload* file konfigurasi nginx.
 ```
-sudo nginx -s reload
+$ sudo nginx -s reload
 ```
 
 Setelah itu, aplikasi sudah bisa diakses menggunakan domain kita yang sudah terinstal ssl.
