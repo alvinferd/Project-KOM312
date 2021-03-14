@@ -49,6 +49,16 @@ blabla
 ---
 <br>
 
+# 📒Fitur Aplikasi
+---
+Aplikasi ini memiliki beberapa fitur sederhana, diantaranya :</br>
+- **Membuat Sebuah Repository**</br>Pengguna dapat membuat repository dari notenya sendiri dengan fitur penamaan repository beserta password untuk mengakses. Password dan nama respository dapat diubah</br>![](Dokumentasi/SS6.png)
+- **Markdown Editor**</br>Pengguna dapat menuliskan teks dengan format markdown dan sistem dapat langsung menampilkan hasilnya (pada Kotak A)
+- **Membuat Note Baru**</br>Pengguna dapat membuat note baru (pada Kotak C)
+- **Mencari Note**</br>Dapat dilihat pada Kotak B
+- **Menyimpan dan Mengubah Nama serta Password**</br>Dapat dilihat dan diakses pada tab label D
+![](Dokumentasi/SS7.png)
+
 # ⚙️Setup VPS
 Kami mencoba untuk menginstall dan menjalankan aplikasi menggunakan Virtual Private Server. Untuk itu, terlebih dahulu kita perlu untuk membuat sebuah VPS dan melakukan beberapa setup. Disini kami menggunakan VPS dari **Google Cloud Product** menggunakan _credit free trial_ . Pada prosesnya, pertama kita perlu membuat sebuah VM baru pada google cloud.
 
