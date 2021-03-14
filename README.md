@@ -42,15 +42,11 @@ Original Repository : https://github.com/muety/mininote
 
 ---
 
-# Deskripsi Aplikasi
+# 📒 Deskripsi Aplikasi
 ---
 Aplikasi ini adalah aplikasi **Markdown Note** garapan [_muety_](https://github.com/muety/mininote) bersifat _self-hosted_ menggunakan [Vue 3](https://v3.vuejs.org) dan [Express](http://expressjs.com). Aplikasi ini dapat membuat sebuah teks dengan format markdown serta dapat langsung direpresentasikan. Sebagai tambahan, anda dapat mempelajari markdown di [link berikut ini](https://www.markdownguide.org/basic-syntax/) untuk memudahkan penggunaan.
 ![](https://i.imgur.com/Y9TFu6w.png)
 
-<br>
-
-# 📒Fitur Aplikasi
----
 Aplikasi ini memiliki beberapa fitur sederhana, diantaranya :</br>
 - **Membuat Sebuah Repository**</br>Pengguna dapat membuat repository dari notenya sendiri dengan fitur penamaan repository beserta password untuk mengakses. Password dan nama respository dapat diubah</br>![](Dokumentasi/SS6.png)
 - **Markdown Editor**</br>Pengguna dapat menuliskan teks dengan format markdown dan sistem dapat langsung menampilkan hasilnya (pada Kotak A)
@@ -229,7 +225,8 @@ Lakukan *reload* file konfigurasi nginx.
 $ sudo nginx -s reload
 ```
 
-Setelah itu, aplikasi sudah bisa diakses menggunakan domain kita yang sudah terinstal ssl.
+Setelah itu, aplikasi sudah bisa diakses menggunakan domain kita yang sudah terinstal ssl. Web akhir aplikasi dapat diakses secara publik pada web berikut : [MiniNote](https://mininote.bintangfikriguska.my.id/)
+
 ![](Dokumentasi/SS8.png)
 
 ---
