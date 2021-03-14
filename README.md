@@ -181,7 +181,7 @@ Di sisi server, kami menggunakan nginx sebagai web server untuk melakukan setup 
 ```
 $ sudo apt install nginx
 ```
-# TODO Langkah Cloudflare.
+# \#TODO Langkah Cloudflare.
 
 Tambahkan file konfigurasi /etc/nginx/sites-available/mininote dengan isi sebagai berikut:
 ```
@@ -216,7 +216,7 @@ server {
                 proxy_set_header        X-Forwarded-For $proxy_add_x_forwarded_for;
                 proxy_set_header        X-Forwarded-Proto $scheme;
                 
-                proxy_pass          http://localhost:3000;
+                proxy_pass              http://localhost:3000;
         }
 }
 ```
@@ -225,11 +225,13 @@ Setelah itu buat symbolic link (symlink) `/etc/nginx/sites-enabled/mininote` yan
 ```
 sudo ln -s /etc/nginx/sites-available/mininote /etc/nginx/sites-enabled/
 ```
-Lakukan `reload` file konfigurasi nginx.
+Lakukan *reload* file konfigurasi nginx.
 ```
 sudo nginx -s reload
 ```
 
+Setelah itu, aplikasi sudah bisa diakses menggunakan domain kita yang sudah terinstal ssl.
+![](Dokumentasi/SS9.png)
 
 ---
 
