@@ -231,7 +231,7 @@ sudo nginx -s reload
 ```
 
 Setelah itu, aplikasi sudah bisa diakses menggunakan domain kita yang sudah terinstal ssl.
-![](Dokumentasi/SS9.png)
+![](Dokumentasi/SS8.png)
 
 ---
 
