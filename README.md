@@ -43,10 +43,10 @@ Original Repository : https://github.com/muety/mininote
 ---
 
 # Deskripsi Aplikasi
-blablabalbla
-blablablabla
-blabla
 ---
+Aplikasi ini adalah aplikasi **Markdown Note** garapan [_muety_](https://github.com/muety/mininote) bersifat _self-hosted_ menggunakan [Vue 3](https://v3.vuejs.org) dan [Express](http://expressjs.com). Aplikasi ini dapat membuat sebuah teks dengan format markdown serta dapat langsung direpresentasikan. Sebagai tambahan, anda dapat mempelajari markdown di [link berikut ini](https://www.markdownguide.org/basic-syntax/) untuk memudahkan penggunaan.
+![](https://i.imgur.com/Y9TFu6w.png)
+
 <br>
 
 # 📒Fitur Aplikasi
