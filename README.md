@@ -177,6 +177,24 @@ Di sisi server, kami menggunakan nginx sebagai web server untuk melakukan setup 
 $ sudo apt install nginx
 ```
 # \#TODO Langkah Cloudflare.
+**cloudflare**
+Register dan login pada akun cloudflare. Setelah itu tambahkan domain dengan menekan tombol `add site`
+![](Dokumentasi/SS10.png)
+
+Masukkan domain website anda.
+![](Dokumentasi/SS11.png)
+
+setelah itu pilih free plan jika ingin menggunakan plan yang gratis.
+![](Dokumentasi/SS12.png)
+
+Akan terdapat table untuk menambahkan record DNS, masukkan IP publik server anda ke dalam record domain yang anda inginkan tersebut.
+![](Dokumentasi/SS9.png)
+
+Ganti nameserver anda pada domain registrar dengan nameserver cloudflare.
+![](Dokumentasi/SS13.png)
+
+
+
 
 Tambahkan file konfigurasi `/etc/nginx/sites-available/mininote` dengan isi sebagai berikut:
 ```
