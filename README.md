@@ -199,7 +199,11 @@ Ganti nameserver anda pada domain registrar dengan nameserver cloudflare.
 
 ![](Dokumentasi/SS13.png)
 
+Setelah nameserver diubah, pilih tab `SSL/TLS`, lalu tab `Origin Server`, dan pilih `create certificate`. Akan ada tampilan seperti berikut:
 
+![](Dokumentasi/SS14.png)
+
+Setelah tombol `Create` ditekan, akan terdapat `origin certificate` dan `private key`. Copy dan simpan `origin certificate` ke dalam file `/etc/ssl/certs/cert.pem` dan `private key` ke dalam file `/etc/ssl/private/priv.key`. (File bisa diubah sesuai keinginan)
 
 
 Tambahkan file konfigurasi `/etc/nginx/sites-available/mininote` dengan isi sebagai berikut:
