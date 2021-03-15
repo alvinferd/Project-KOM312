@@ -176,8 +176,8 @@ Di sisi server, kami menggunakan nginx sebagai web server untuk melakukan setup 
 ```
 $ sudo apt install nginx
 ```
-# \#TODO Langkah Cloudflare.
-**cloudflare**
+
+## **Konfigurasi Cloudflare**
 
 Register dan login pada akun cloudflare. Setelah itu tambahkan domain dengan menekan tombol `add site`
 
@@ -205,6 +205,7 @@ Setelah nameserver diubah, pilih tab `SSL/TLS`, lalu tab `Origin Server`, dan pi
 
 Setelah tombol `Create` ditekan, akan terdapat `origin certificate` dan `private key`. Copy dan simpan `origin certificate` ke dalam file `/etc/ssl/certs/cert.pem` dan `private key` ke dalam file `/etc/ssl/private/priv.key`. (File bisa diubah sesuai keinginan)
 
+## **Konfigurasi nginx**
 
 Tambahkan file konfigurasi `/etc/nginx/sites-available/mininote` dengan isi sebagai berikut:
 ```
