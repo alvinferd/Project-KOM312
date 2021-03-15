@@ -181,27 +181,27 @@ $ sudo apt install nginx
 
 Register dan login pada akun cloudflare. Setelah itu tambahkan domain dengan menekan tombol `add site`
 
-![](Dokumentasi/SS10.png)
+> ![](Dokumentasi/SS10.png)
 
 Masukkan domain website anda.
 
-![](Dokumentasi/SS11.png)
+> ![](Dokumentasi/SS11.png)
 
 setelah itu pilih free plan jika ingin menggunakan plan yang gratis.
 
-![](Dokumentasi/SS12.png)
+> ![](Dokumentasi/SS12.png)
 
 Akan terdapat table untuk menambahkan record DNS, masukkan IP publik server anda ke dalam record domain yang anda inginkan tersebut.
 
-![](Dokumentasi/SS9.png)
+> ![](Dokumentasi/SS9.png)
 
 Ganti nameserver anda pada domain registrar dengan nameserver cloudflare.
 
-![](Dokumentasi/SS13.png)
+> ![](Dokumentasi/SS13.png)
 
 Setelah nameserver diubah, pilih tab `SSL/TLS`, lalu tab `Origin Server`, dan pilih `create certificate`. Akan ada tampilan seperti berikut:
 
-![](Dokumentasi/SS14.png)
+> ![](Dokumentasi/SS14.png)
 
 Setelah tombol `Create` ditekan, akan terdapat `origin certificate` dan `private key`. Copy dan simpan `origin certificate` ke dalam file `/etc/ssl/certs/cert.pem` dan `private key` ke dalam file `/etc/ssl/private/priv.key`. (File bisa diubah sesuai keinginan)
 
