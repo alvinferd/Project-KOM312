@@ -47,14 +47,6 @@ Original Repository : https://github.com/muety/mininote
 Aplikasi ini adalah aplikasi **Markdown Note** garapan [_muety_](https://github.com/muety/mininote) bersifat _self-hosted_ menggunakan [Vue 3](https://v3.vuejs.org) dan [Express](http://expressjs.com). Aplikasi ini dapat membuat sebuah teks dengan format markdown serta dapat langsung direpresentasikan. Sebagai tambahan, anda dapat mempelajari markdown di [link berikut ini](https://www.markdownguide.org/basic-syntax/) untuk memudahkan penggunaan.
 ![](https://i.imgur.com/Y9TFu6w.png)
 
-Aplikasi ini memiliki beberapa fitur sederhana, diantaranya :</br>
-- **Membuat Sebuah Repository**</br>Pengguna dapat membuat repository dari notenya sendiri dengan fitur penamaan repository beserta password untuk mengakses. Password dan nama respository dapat diubah</br>![](Dokumentasi/SS6.png)
-- **Markdown Editor**</br>Pengguna dapat menuliskan teks dengan format markdown dan sistem dapat langsung menampilkan hasilnya (pada Kotak A)
-- **Membuat Note Baru**</br>Pengguna dapat membuat note baru (pada Kotak C)
-- **Mencari Note**</br>Dapat dilihat pada Kotak B
-- **Menyimpan dan Mengubah Nama serta Password**</br>Dapat dilihat dan diakses pada tab label D
-![](Dokumentasi/SS7.png)
-
 # ⚙️Setup VPS
 Kami mencoba untuk menginstall dan menjalankan aplikasi menggunakan Virtual Private Server. Untuk itu, terlebih dahulu kita perlu untuk membuat sebuah VPS dan melakukan beberapa setup. Disini kami menggunakan VPS dari **Google Cloud Product** menggunakan _credit free trial_ . Pada prosesnya, pertama kita perlu membuat sebuah VM baru pada google cloud.
 
@@ -211,7 +203,7 @@ Setelah tombol `Create` ditekan, akan terdapat `origin certificate` dan `private
 Tambahkan file konfigurasi `/etc/nginx/sites-available/mininote` dengan isi sebagai berikut:
 ```
 server {
-    listen 80;
+    listen 80; ****
     listen [::]:80;
     
     # Sesuaikan dengan domain anda
@@ -259,8 +251,30 @@ $ sudo nginx -s reload
 Setelah itu, aplikasi sudah bisa diakses menggunakan domain kita yang sudah terinstal ssl. Web akhir aplikasi dapat diakses secara publik pada web berikut : [MiniNote](https://mininote.bintangfikriguska.my.id/)
 
 ![](Dokumentasi/SS8.png)
-
 ---
+# **💻 Cara Pemakaian**
+---
+Aplikasi ini memiliki beberapa fitur sederhana, diantaranya :</br>
+- **Membuat Sebuah Repository**</br>Pengguna dapat membuat repository dari notenya sendiri dengan fitur penamaan repository beserta password untuk mengakses. Password dan nama respository dapat diubah</br>![](Dokumentasi/SS6.png)
+- **Markdown Editor**</br>Pengguna dapat menuliskan teks dengan format markdown dan sistem dapat langsung menampilkan hasilnya (pada Kotak A)
+- **Membuat Note Baru**</br>Pengguna dapat membuat note baru (pada Kotak C)
+- **Mencari Note**</br>Dapat dilihat pada Kotak B
+- **Menyimpan dan Mengubah Nama serta Password**</br>Dapat dilihat dan diakses pada tab label D
+![](Dokumentasi/SS7.png)
+---
+# **Pembahasan**
+---
+## Kelebihan
+- Aplikasi ini cukup responsif dalam menginterpretasikan markdown 
+- Fitur password dan nama directory user cukup fungsional 
+- Lebih mirip ke markdown playground
+## Kekurangan
+- Aplikasi ini memiliki user interface yang kurang menarik dengan user experience yang kurang nyaman juga. Pengguna harus benar-benar menghafal format markdown tanpa ada autofill.
+- Fitur yang disediakan juga tidak banyak seperti yang ditawarkan oleh [Notion](notion.so)
+## Perbandingan dengan Aplikasi Sejenis
+- Notion memiliki fitur yang lebih banyak dibanding MiniNote (dapat meng-input tabel, gambar, _embed_ website, dan lebih banyak lagi
+- Notion memiliki user-experience yang ramah, pengguna yang tidak paham tentang script akan mudah menggunakannya
+-![](https://img.utdstc.com/screen/1/notion.png:200)
 
 <br><br>
 ## 📓 License
