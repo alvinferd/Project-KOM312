@@ -226,7 +226,7 @@ server {
         # Sesuaikan dengan domain anda
         server_name mininote.bintangfikriguska.my.id www.mininote.bintangfikriguska.my.id;
         
-        # Sesuai dengan sertifikat file yang terdapat di server anda
+        # Sesuaikan dengan sertifikat file yang terdapat di server anda
         ssl_certificate /etc/ssl/certs/cert.pem;
         ssl_certificate_key /etc/ssl/private/priv.key;
 
@@ -244,11 +244,12 @@ server {
         }
 }
 ```
-Setelah itu buat symbolic link (symlink) `/etc/nginx/sites-enabled/mininote` yang mengarah ke `/etc/nginx/sites-available/mininote`. Setelah membuat symlink di dalam folder tersebut, file konfigurasi yang telah kita buat tersebut diaggap aktif oleh nginx. Alasan digunakannya symlink di folder `sites-enabled` adalah agar lebih terorganisir, jadi apabila ingin menonaktifkan file konfigurasi (menghapus symlink) dan suatu saat ingin mengaktifkannya lagi, tinggal membuat symlink yang baru ke folder `sites-enabled`.
-
+Setelah itu buat symbolic link (symlink) `/etc/nginx/sites-enabled/mininote` yang mengarah ke `/etc/nginx/sites-available/mininote`. 
 ```
 $ sudo ln -s /etc/nginx/sites-available/mininote /etc/nginx/sites-enabled/
 ```
+Setelah membuat symlink di dalam folder tersebut, file konfigurasi yang telah kita buat tersebut akan diaggap aktif oleh nginx (setelah di-reload). Alasan digunakannya symlink di folder `sites-enabled` adalah agar lebih terorganisir, jadi apabila ingin menonaktifkan file konfigurasi (menghapus symlink) dan suatu saat ingin mengaktifkannya lagi, tinggal membuat symlink yang baru ke folder `sites-enabled`.
+
 Lakukan *reload* file konfigurasi nginx.
 ```
 $ sudo nginx -s reload
