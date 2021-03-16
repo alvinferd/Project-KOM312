@@ -159,12 +159,6 @@ Kami menggunakan cloudflare sebagai server penghubung antara server asli dengan 
 
 Di sisi server, kami menggunakan nginx sebagai web server untuk melakukan setup domain dan sertikat SSL yang telah diberikan oleh cloudflare pada server. Selain itu, nginx juga digunakan untuk melakukan reverse proxy ke port tertentu tempat aplikasi berada.
 
-## ⚙️ Requirements:
-**nginx**
-```
-$ sudo apt install nginx
-```
-
 ## **2.a Konfigurasi Cloudflare**
 
 Register dan login pada akun cloudflare. Setelah itu tambahkan domain dengan menekan tombol `add site`
@@ -194,6 +188,13 @@ Setelah nameserver diubah, pilih tab `SSL/TLS`, lalu tab `Origin Server`, dan pi
 Setelah tombol `Create` ditekan, akan terdapat `origin certificate` dan `private key`. Copy dan simpan `origin certificate` ke dalam file `/etc/ssl/certs/cert.pem` dan `private key` ke dalam file `/etc/ssl/private/priv.key`. (File bisa diubah sesuai keinginan)
 
 ## **2.b Konfigurasi nginx**
+
+
+## ⚙️ Requirements:
+**nginx**
+```
+$ sudo apt install nginx
+```
 
 Tambahkan file konfigurasi `/etc/nginx/sites-available/mininote` dengan isi sebagai berikut:
 ```
@@ -249,7 +250,7 @@ Setelah itu, aplikasi sudah bisa diakses menggunakan domain kita yang sudah teri
 ---
 # **💻 Cara Pemakaian**
 ---
-Aplikasi ini memiliki beberapa fitur sederhana, diantaranya :</br>
+Aplikasi dapat diakses pada alamat publik kami di [https://mininote.bintangfikriguska.my.id/](https://mininote.bintangfikriguska.my.id/). Aplikasi ini memiliki beberapa fitur sederhana, diantaranya :</br>
 - **Membuat Sebuah Repository**</br>Pengguna dapat membuat repository dari notenya sendiri dengan fitur penamaan repository beserta password untuk mengakses. Password dan nama respository dapat diubah</br>![](Dokumentasi/SS6.png)
 - **Markdown Editor**</br>Pengguna dapat menuliskan teks dengan format markdown dan sistem dapat langsung menampilkan hasilnya (pada Kotak A)
 - **Membuat Note Baru**</br>Pengguna dapat membuat note baru (pada Kotak C)
