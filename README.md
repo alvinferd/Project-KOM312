@@ -217,7 +217,7 @@ server {
     # Sesuaikan dengan domain anda
     server_name mininote.bintangfikriguska.my.id www.mininote.bintangfikriguska.my.id;
 
-    return 302 https://$server_name$request_uri;
+    return 301 https://$server_name$request_uri;
 }
 
 server {
