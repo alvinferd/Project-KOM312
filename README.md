@@ -42,7 +42,7 @@ Original Repository : https://github.com/muety/mininote
 
 ---
 
-[Sekilas Tentang](-sekilas-tentang-mininote) | [Instalasi](#instalasi) | [Konfigurasi](#-konfigurasi) | [Cara Pemakaian](#-cara-pemakaian) | [Pembahasan](#pembahasan) | [Referensi](#referensi)
+[Sekilas Tentang](#-sekilas-tentang-mininote) | [Instalasi](#-instalasi) | [Konfigurasi](#-konfigurasi) | [Cara Pemakaian](#-cara-pemakaian) | [Pembahasan](#pembahasan) | [Referensi](#-referensi)
 :---:|:---:|:---:|:---:|:---:|:---:
 
 # 📒 Sekilas Tentang MiniNote
@@ -50,7 +50,7 @@ Original Repository : https://github.com/muety/mininote
 MiniNote merupakan sebuah aplikasi **Markdown Note** garapan [_muety_](https://github.com/muety/mininote) bersifat _self-hosted_ menggunakan [Vue 3](https://v3.vuejs.org) dan [Express](http://expressjs.com). Aplikasi ini dapat membuat sebuah teks dengan format markdown serta dapat langsung direpresentasikan. Sebagai tambahan, anda dapat mempelajari markdown di [link berikut ini](https://www.markdownguide.org/basic-syntax/) untuk memudahkan penggunaan. MiniNote pada projek ini telah di _deploy_ ke alamat publik yang dapat diakses melalui  [https://mininote.bintangfikriguska.my.id/](https://mininote.bintangfikriguska.my.id/)
 ![](https://i.imgur.com/Y9TFu6w.png)
 
-# Instalasi
+# 🚜 Instalasi
 Untuk menjalankan aplikasi terdapat 2 cara, yaitu dengan cara manual dan juga docker.
 
 # **__1. Manual__**
@@ -258,7 +258,7 @@ Aplikasi dapat diakses pada alamat publik kami di [https://mininote.bintangfikri
 - **Menyimpan dan Mengubah Nama serta Password**</br>Dapat dilihat dan diakses pada tab label D
 ![](Dokumentasi/SS7.png)
 ---
-# **Pembahasan**
+# 🗣️ **Pembahasan**
 ---
 ## Kelebihan
 - Aplikasi ini cukup responsif dalam menginterpretasikan markdown 
@@ -278,5 +278,5 @@ Aplikasi dapat diakses pada alamat publik kami di [https://mininote.bintangfikri
 -![](https://img.utdstc.com/screen/1/notion.png:200)
 
 <br><br>
-# Referensi
+# 📚 Referensi
 1. [how to host a website using cloudflare and nginx on ubuntu 20 04](https://www.digitalocean.com/community/tutorials/how-to-host-a-website-using-cloudflare-and-nginx-on-ubuntu-20-04) - DigitalOcean
