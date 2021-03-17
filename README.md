@@ -41,6 +41,8 @@ Original Repository : https://github.com/muety/mininote
 </table>
 
 ---
+[Sekilas Tentang](-sekilas-tentang-mininote) | [Instalasi](#instalasi) | [Konfigurasi](#-konfigurasi) | [Cara Pemakaian](#-cara-pemakaian) | [Pembahasan](#pembahasan) | [Referensi](#referensi)
+:---:|:---:|:---:|:---:|:---:|:---:|:---:
 
 # 📒 Sekilas Tentang MiniNote
 ---
@@ -129,7 +131,7 @@ $ docker run -d -p 127.0.0.1:3000:3000 -v mininote-data:/app/data --name mininot
 
 ---
 
-# ⚙️ Konfigurasi && Otomatisasi 
+# ⚙️ Konfigurasi
 # 1. Setup VPS
 Kami mencoba untuk menginstall dan menjalankan aplikasi menggunakan Virtual Private Server. Untuk itu, terlebih dahulu kita perlu untuk membuat sebuah VPS dan melakukan beberapa setup. Disini kami menggunakan VPS dari **Google Cloud Product** menggunakan _credit free trial_ . Pada prosesnya, pertama kita perlu membuat sebuah VM baru pada google cloud.
 
@@ -151,9 +153,6 @@ Adapun details VPS yang kami setup diantaranya : <br>
 
 ---
 
-<br>
-
-<br><br>
 # 2. 🔒 Setup domain dan SSL
 Kami menggunakan cloudflare sebagai server penghubung antara server asli dengan visitor. Cloudflare sendiri adalah Content Delivery Network (CDN) yang memiliki banyak fasilitas. Oleh karena itu kami menggunakannya untuk instalasi SSL dan sebagai DNS.
 
