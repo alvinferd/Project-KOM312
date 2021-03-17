@@ -199,7 +199,7 @@ $ sudo apt install nginx
 Tambahkan file konfigurasi `/etc/nginx/sites-available/mininote` dengan isi sebagai berikut:
 ```
 server {
-    listen 80; ****
+    listen 80;
     listen [::]:80;
     
     # Sesuaikan dengan domain anda
