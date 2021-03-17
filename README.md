@@ -5,50 +5,53 @@
 [![Say thanks](https://badges.fw-web.space/badge/SayThanks.io-%E2%98%BC-1EAEDB.svg?style=flat-square)](https://saythanks.io/to/n1try)<br>
 Original Repository : https://github.com/muety/mininote
 <br>
-# Aplikasi Web "Mininote"
+# Laporan Proyek Akhir KOM312 Komunikasi Data dan Jaringan
+
+# Anggota
+<table>
+    <thead>
+        <tr>
+            <th></th>
+            <th>Nama</th>
+            <th>Nim</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>Rafael Tektano Grandiawan Eknanda</td>
+            <td>G64180001</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Bintang Fikriguska</td>
+            <td>G64180024</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Alvin Ferdiansyah</td>
+            <td>G64180079</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Muhammad Hafizhan</td>
+            <td>G64180100</td>
+        </tr>
+</tbody>
+</table>
 
 ---
 
-# Sekilas Tentang
+# 📒 Sekilas Tentang MiniNote
 ---
-Aplikasi ini adalah aplikasi **Markdown Note** garapan [_muety_](https://github.com/muety/mininote) bersifat _self-hosted_ menggunakan [Vue 3](https://v3.vuejs.org) dan [Express](http://expressjs.com). Aplikasi ini dapat membuat sebuah teks dengan format markdown serta dapat langsung direpresentasikan. Sebagai tambahan, anda dapat mempelajari markdown di [link berikut ini](https://www.markdownguide.org/basic-syntax/) untuk memudahkan penggunaan.
+MiniNote merupakan sebuah aplikasi **Markdown Note** garapan [_muety_](https://github.com/muety/mininote) bersifat _self-hosted_ menggunakan [Vue 3](https://v3.vuejs.org) dan [Express](http://expressjs.com). Aplikasi ini dapat membuat sebuah teks dengan format markdown serta dapat langsung direpresentasikan. Sebagai tambahan, anda dapat mempelajari markdown di [link berikut ini](https://www.markdownguide.org/basic-syntax/) untuk memudahkan penggunaan. MiniNote pada projek ini telah di _deploy_ ke alamat publik yang dapat diakses melalui  [https://mininote.bintangfikriguska.my.id/](https://mininote.bintangfikriguska.my.id/)
 ![](https://i.imgur.com/Y9TFu6w.png)
 
-Aplikasi ini memiliki beberapa fitur sederhana, diantaranya :</br>
-- **Membuat Sebuah Repository**</br>Pengguna dapat membuat repository dari notenya sendiri dengan fitur penamaan repository beserta password untuk mengakses. Password dan nama respository dapat diubah</br>![](Dokumentasi/SS6.png)
-- **Markdown Editor**</br>Pengguna dapat menuliskan teks dengan format markdown dan sistem dapat langsung menampilkan hasilnya (pada Kotak A)
-- **Membuat Note Baru**</br>Pengguna dapat membuat note baru (pada Kotak C)
-- **Mencari Note**</br>Dapat dilihat pada Kotak B
-- **Menyimpan dan Mengubah Nama serta Password**</br>Dapat dilihat dan diakses pada tab label D
-![](Dokumentasi/SS7.png)
-
-# ⚙️Setup VPS
-Kami mencoba untuk menginstall dan menjalankan aplikasi menggunakan Virtual Private Server. Untuk itu, terlebih dahulu kita perlu untuk membuat sebuah VPS dan melakukan beberapa setup. Disini kami menggunakan VPS dari **Google Cloud Product** menggunakan _credit free trial_ . Pada prosesnya, pertama kita perlu membuat sebuah VM baru pada google cloud.
-
-![](Dokumentasi/SS3.png)
-Adapun details VPS yang kami setup diantaranya : <br>
-- **Machine type** : n1-standard-1 (1 vCPU, 3.75 GB memory)
-- **CPU platform** : Intel Skylake
-- **Zone** : asia-southeast2-a
-- **External IP** : 34.101.67.147 (ephemeral)
-- **Operating System** : Ubuntu 20.04 LTS
-- **Remote Access** : SSH<br>
-<p>Karena aplikasi web akan dibuka sebagai akses publik, kita perlu untuk menyiapkan beberapa port dan rule firewall juga.</p>
-
-![](Dokumentasi/SS2.png)
-<p> Kita juga harus memastikan bahwa server dapat terkoneksi menggunakan SSH. Kita dapat mengakses remote google cloud, dan login sebagai sudo untuk membuat akses baru agar server dapat diakses menggunakan SSH client, serta menambahkan beberapa pengaturan lain yang diperlukan. Setelah VPS siap digunakan, kita dapat lanjut ke langkah berikutnya yaitu mempersiapkan requirement untuk menginstall aplikasi.</p>
-
-![](Dokumentasi/SS4.png)
-![](Dokumentasi/SS5.png)
-
----
-
-<br>
 # Instalasi
 Untuk menjalankan aplikasi terdapat 2 cara, yaitu dengan cara manual dan juga docker.
 
-## **__1. Manual__**
-### ⚙️ Pre-Install Requirements
+# **__1. Manual__**
+## ⚙️ Pre-Install Requirements
 Terdapat beberapa requirements yang akan kita gunakan untuk melakukan install dan build pada aplikasi. Untuk itu, kita harus memastikan semua requirements dibawah ini terinstall dengan benar. Beberapa requirement memiliki minimal versi yang _capable_ untuk digunakan. Namun di bawah ini adalah versi dari requirement yang kami install dan gunakan.<br><br>
 
  **NodeJS v14.16.0**
@@ -75,7 +78,7 @@ $ sudo npm install
 ---
 <br>
 
-### ⚙️Build && Run
+## ⚙️Build && Run
 ```
 # **Clone Repositori orisinilnya**
 $ git clone https://github.com/muety/mininote
@@ -93,10 +96,10 @@ $ cd mininote
 $ yarn start
 ```
 
-## **__2. Docker__**
+# 🐳 **__2. Docker__**
 Terdapat alternatif lain untuk menjalankan aplikasi, yaitu menggunakan docker. Docker sendiri merupakan program untuk membangun, mengemas, dan menjalankan aplikasi dengan membuatnya menjadi container (wadah).  Keuntungan menggunakan docker salah satunya adalah terisolasi, aplikasi yang terisolasi akan terpisah dan tidak akan mengganggu host apabila terdapat masalah (Mirip seperti VM). <br><br>
 
-### ⚙️ Pre-Install Requirements:
+## ⚙️ Pre-Install Requirements:
 **Docker**
 ```
 $ sudo apt-get update
@@ -114,7 +117,7 @@ $ sudo apt-get install docker-ce docker-ce-cli containerd.io
 $ sudo usermod -a -G docker $USER
 ```
 
-### ⌨️ Running the App
+## ⌨️ Running the App
 ```
 # Membuat volume persistent yang akan digunakan aplikasi
 $ docker volume create mininote-data
@@ -126,27 +129,37 @@ $ docker run -d -p 127.0.0.1:3000:3000 -v mininote-data:/app/data --name mininot
 
 ---
 
-<br><br>
-# Konfigurasi
-## 🔒 Setup domain dan SSL
-Kami menggunakan cloudflare sebagai server penghubung antara server asli dengan visitor. Cloudflare sendiri adalah Content Delivery Network (CDN) yang memiliki banyak fasilitas, beberapa diataranya adalah sebagai berikut:
-- Mitigasi serangan DDoS.
-- Analytics request yang mengakses website.
-- Instalasi sertifikat SSL.
-- DNS
-- Dll.
+# ⚙️ Konfigurasi && Otomatisasi 
+# 1. Setup VPS
+Kami mencoba untuk menginstall dan menjalankan aplikasi menggunakan Virtual Private Server. Untuk itu, terlebih dahulu kita perlu untuk membuat sebuah VPS dan melakukan beberapa setup. Disini kami menggunakan VPS dari **Google Cloud Product** menggunakan _credit free trial_ . Pada prosesnya, pertama kita perlu membuat sebuah VM baru pada google cloud.
 
-Oleh karena itu kami menggunakannya untuk instalasi SSL dan sebagai DNS.
+![](Dokumentasi/SS3.png)
+Adapun details VPS yang kami setup diantaranya : <br>
+- **Machine type** : n1-standard-1 (1 vCPU, 3.75 GB memory)
+- **CPU platform** : Intel Skylake
+- **Zone** : asia-southeast2-a
+- **External IP** : 34.101.67.147 (ephemeral)
+- **Operating System** : Ubuntu 20.04 LTS
+- **Remote Access** : SSH<br>
+<p>Karena aplikasi web akan dibuka sebagai akses publik, kita perlu untuk menyiapkan beberapa port dan rule firewall juga.</p>
+
+![](Dokumentasi/SS2.png)
+<p> Kita juga harus memastikan bahwa server dapat terkoneksi menggunakan SSH. Kita dapat mengakses remote google cloud, dan login sebagai sudo untuk membuat akses baru agar server dapat diakses menggunakan SSH client, serta menambahkan beberapa pengaturan lain yang diperlukan. Setelah VPS siap digunakan, kita dapat lanjut ke langkah berikutnya yaitu mempersiapkan requirement untuk menginstall aplikasi.</p>
+
+![](Dokumentasi/SS4.png)
+![](Dokumentasi/SS5.png)
+
+---
+
+<br>
+
+<br><br>
+# 2. 🔒 Setup domain dan SSL
+Kami menggunakan cloudflare sebagai server penghubung antara server asli dengan visitor. Cloudflare sendiri adalah Content Delivery Network (CDN) yang memiliki banyak fasilitas. Oleh karena itu kami menggunakannya untuk instalasi SSL dan sebagai DNS.
 
 Di sisi server, kami menggunakan nginx sebagai web server untuk melakukan setup domain dan sertikat SSL yang telah diberikan oleh cloudflare pada server. Selain itu, nginx juga digunakan untuk melakukan reverse proxy ke port tertentu tempat aplikasi berada.
 
-### ⚙️ Requirements:
-**nginx**
-```
-$ sudo apt install nginx
-```
-
-### **Konfigurasi Cloudflare**
+## **2.a Konfigurasi Cloudflare**
 
 Register dan login pada akun cloudflare. Setelah itu tambahkan domain dengan menekan tombol `add site`
 
@@ -174,7 +187,14 @@ Setelah nameserver diubah, pilih tab `SSL/TLS`, lalu tab `Origin Server`, dan pi
 
 Setelah tombol `Create` ditekan, akan terdapat `origin certificate` dan `private key`. Copy dan simpan `origin certificate` ke dalam file `/etc/ssl/certs/cert.pem` dan `private key` ke dalam file `/etc/ssl/private/priv.key`. (File bisa diubah sesuai keinginan)
 
-### **Konfigurasi nginx**
+## **2.b Konfigurasi nginx**
+
+
+## ⚙️ Requirements:
+**nginx**
+```
+$ sudo apt install nginx
+```
 
 Tambahkan file konfigurasi `/etc/nginx/sites-available/mininote` dengan isi sebagai berikut:
 ```
@@ -227,10 +247,36 @@ $ sudo nginx -s reload
 Setelah itu, aplikasi sudah bisa diakses menggunakan domain kita yang sudah terinstal ssl. Web akhir aplikasi dapat diakses secara publik pada web berikut : [MiniNote](https://mininote.bintangfikriguska.my.id/)
 
 ![](Dokumentasi/SS8.png)
-
 ---
+# **💻 Cara Pemakaian**
+---
+Aplikasi dapat diakses pada alamat publik kami di [https://mininote.bintangfikriguska.my.id/](https://mininote.bintangfikriguska.my.id/). Aplikasi ini memiliki beberapa fitur sederhana, diantaranya :</br>
+- **Membuat Sebuah Repository**</br>Pengguna dapat membuat repository dari notenya sendiri dengan fitur penamaan repository beserta password untuk mengakses. Password dan nama respository dapat diubah</br>![](Dokumentasi/SS6.png)
+- **Markdown Editor**</br>Pengguna dapat menuliskan teks dengan format markdown dan sistem dapat langsung menampilkan hasilnya (pada Kotak A)
+- **Membuat Note Baru**</br>Pengguna dapat membuat note baru (pada Kotak C)
+- **Mencari Note**</br>Dapat dilihat pada Kotak B
+- **Menyimpan dan Mengubah Nama serta Password**</br>Dapat dilihat dan diakses pada tab label D
+![](Dokumentasi/SS7.png)
+---
+# **Pembahasan**
+---
+## Kelebihan
+- Aplikasi ini cukup responsif dalam menginterpretasikan markdown 
+- Fitur password dan nama directory user cukup fungsional 
+- Aplikasi dibangun dengan node js yang cukup sederhana dan mudah diinstal
+- Lebih mirip ke markdown playground
+- Mitigasi serangan DDoS.
+- HTTPS, Instalasi menggunakan sertifikat SSL, sehingga lebih secure.
+
+## Kekurangan
+- Aplikasi ini memiliki user interface yang kurang menarik dengan user experience yang kurang nyaman. Pengguna harus benar-benar menghafal format markdown tanpa ada autofill.
+- Fitur yang disediakan juga tidak banyak seperti yang ditawarkan oleh [Notion](notion.so)
+
+## Perbandingan dengan Aplikasi Sejenis
+- Notion memiliki fitur yang lebih banyak dibanding MiniNote (dapat meng-input tabel, gambar, _embed_ website, dan lebih banyak lagi
+- Notion memiliki user-experience yang ramah, pengguna yang tidak paham tentang script akan mudah menggunakannya
+-![](https://img.utdstc.com/screen/1/notion.png:200)
 
 <br><br>
-### Referensi
-[how to host a website using cloudflare and nginx on ubuntu 20 04](https://www.digitalocean.com/community/tutorials/how-to-host-a-website-using-cloudflare-and-nginx-on-ubuntu-20-04)
-
+## 📓 License
+MIT @ [Ferdinand Mütsch](https://muetsch.io)
