@@ -278,5 +278,5 @@ Aplikasi dapat diakses pada alamat publik kami di [https://mininote.bintangfikri
 -![](https://img.utdstc.com/screen/1/notion.png:200)
 
 <br><br>
-## 📓 License
-MIT @ [Ferdinand Mütsch](https://muetsch.io)
+# Referensi
+1. [how to host a website using cloudflare and nginx on ubuntu 20 04](https://www.digitalocean.com/community/tutorials/how-to-host-a-website-using-cloudflare-and-nginx-on-ubuntu-20-04) - DigitalOcean
