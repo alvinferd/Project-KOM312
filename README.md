@@ -51,7 +51,7 @@ MiniNote merupakan sebuah aplikasi **Markdown Note** garapan [_muety_](https://g
 ![](https://i.imgur.com/Y9TFu6w.png)
 
 # 🚜 Instalasi
-Untuk menjalankan aplikasi terdapat 2 cara, yaitu dengan cara manual dan juga docker.
+Untuk menjalankan aplikasi terdapat beberapa cara, yaitu dengan cara manual dan juga docker pada localhost, dan menggunakan nginx server untuk deploy ke publik.
 
 # **__1. Manual__**
 ## ⚙️ Pre-Install Requirements
@@ -130,6 +130,15 @@ $ docker run -d -p 127.0.0.1:3000:3000 -v mininote-data:/app/data --name mininot
 ```
 <p> Setelah command tersebut dijalankan, aplikasi bisa diakses di localhost port 3000 sama seperti penginstalan manual. </p>
 
+# 3. Nginx Server
+<p> Sebelumnya, kita perlu melakukan setup dan konfigurasi nginx terlebih dahulu yang dijelaskan pada bagian Konfigurasi. Setelah seluruh persiapan dan pengaturan di set dengan baik, kita dapat menjalankan perintah : </p>
+
+```
+$ sudo nginx -s reload
+```
+
+<p>Dan aplikasi pun akan dideploy dan berjalan pada alamat publik.   </p>
+   
 ---
 
 # ⚙️ Konfigurasi
