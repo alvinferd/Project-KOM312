@@ -275,7 +275,7 @@ Aplikasi dapat diakses pada alamat publik kami di [https://mininote.bintangfikri
 ## Perbandingan dengan Aplikasi Sejenis
 - Notion memiliki fitur yang lebih banyak dibanding MiniNote (dapat meng-input tabel, gambar, _embed_ website, dan lebih banyak lagi
 - Notion memiliki user-experience yang ramah, pengguna yang tidak paham tentang script akan mudah menggunakannya
--![](https://img.utdstc.com/screen/1/notion.png:200)
+- ![](https://img.utdstc.com/screen/1/notion.png:200)
 
 <br><br>
 # 📚 Referensi
