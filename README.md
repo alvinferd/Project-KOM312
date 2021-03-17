@@ -42,7 +42,7 @@ Original Repository : https://github.com/muety/mininote
 
 ---
 
-[Sekilas Tentang](#-sekilas-tentang-mininote) | [Instalasi](#-instalasi) | [Konfigurasi](#-konfigurasi) | [Cara Pemakaian](#-cara-pemakaian) | [Pembahasan](#pembahasan) | [Referensi](#-referensi)
+[Sekilas Tentang](#-sekilas-tentang-mininote) | [Instalasi](#-instalasi) | [Konfigurasi](#%EF%B8%8F-konfigurasi) | [Cara Pemakaian](#-cara-pemakaian) | [Pembahasan](#%EF%B8%8F-pembahasan) | [Referensi](#-referensi)
 :---:|:---:|:---:|:---:|:---:|:---:
 
 # 📒 Sekilas Tentang MiniNote
